@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pole dance</title>
+    <style>
+      body {
+        background-image: url(https://2020presidentsreport.arcadia.edu/wp-content/uploads/2020/04/hd-pattern-png-transparent-triangle-transparent-png-image-pattern-transparent-2048_1024.png);
+        background-color: #d5bda6;
+        background-size: cover;
+        font-family: "Times New Roman", Times, serif sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 42px;
+        font-weight: lighter;
+        margin: 10px;
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 24px;
+        font-weight: lighter;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+      }
+
+      p {
+        text-align: center;
+        line-height: 20px;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        font-size: 15px;
+        padding: 6px 10px;
+        border: 1px solid #d5bda6;
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+
+      footer {
+        text-align: center;
+        margin: 10px;
+        font-size: 14px;
+      }
+
+      .container {
+        max-width: 600px;
+        display: block;
+        margin: 10px auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .theme {
+        border: 1px solid black;
+        background-color: #413d3e;
+        color: #d5bda6;
+        font-size: 14px;
+      }
+
+      .pole-dance-main-picture {
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+      }
+
+      .pole-dance-main-picture:hover {
+        transform: scale(1.1);
+      }
+
+      .dark {
+        background-color: #413d3e;
+        color: #d5bda6;
+        background-image: url(https://2020presidentsreport.arcadia.edu/wp-content/uploads/2020/04/hd-pattern-png-transparent-triangle-transparent-png-image-pattern-transparent-2048_1024.png);
+      }
+
+      .dark .container {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .dark .book-classes {
+        background-color: #413d3e;
+        color: #d5bda6;
+      }
+
+      .dark .theme {
+        background-color: #d5bda6;
+        color: #413d3e;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 15px;
+      }
+
+      .grid img {
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+      }
+
+      .grid img:hover {
+        transform: scale(1.1);
+      }
+
+      a:hover {
+        text-decoration: underline;
+        font-weight: lighter;
+      }
+
+      button:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme">DARK THEME</button>
+    <div class="container">
+      <h1>POLE DANCE</h1>
+      <h2>my new hobby</h2>
+      <img
+        src="https://i.pinimg.com/564x/69/3b/ce/693bce651ac79128df69157f72f7799b.jpg"
+        alt="pole-dance"
+        class="pole-dance-main-picture"
+      />
+      <div class="grid">
+        <img
+          src="https://i.pinimg.com/564x/21/5f/38/215f38d89fd177ce205ff00d2f91d82a.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/564x/cb/90/3f/cb903f704c4436ba239b016f09f7f6b9.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/564x/ea/92/4a/ea924a20e3ae94dbbbf8b15c9b5514fb.jpg"
+          alt=""
+        />
+        <img
+          src="https://i.pinimg.com/564x/6f/12/cd/6f12cd2a18a1a5a0fa65b6f9386b40c0.jpg"
+          alt=""
+        />
+      </div>
+      <p>
+        Pole dance combines dance and acrobatics centered on a vertical pole.
+        This performance art form takes place not only in gentleman's clubs as
+        erotic dance, but also as a mainstream form of fitness, practiced in
+        gyms and dedicated dance studios. Pole dancing enthusiasts are of all
+        ages; although many who perform this dance and acrobatic form are
+        adults, that does not stop younger children from learning and performing
+        in competitions. Amateur and professional pole dancing competitions are
+        held in countries around the world.
+        <a href="https://en.wikipedia.org/wiki/Pole_dance" target="_blank"
+          >Learn more.</a
+        >
+      </p>
+      <button class="book-classes">BOOK CLASSES</button>
+    </div>
+    <footer>
+      Coded by
+      <a href="https://www.instagram.com/majapiszczek_/" target="_blank">
+        Maja Piszczek</a
+      >
+    </footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        body.classList.toggle("dark");
+        let button = document.querySelector(".theme");
+        if (body.classList.contains("dark")) {
+          button.innerHTML = "LIGHT THEME";
+        } else {
+          button.innerHTML = "dark theme";
+        }
+      }
+
+      function bookClasses() {
+        let name = prompt("Hey! What is your name?");
+        let mail = prompt(`Nice to meet you ${name}! What is your e-mail?`);
+        alert(`Thank you for joining us, ${name}. We'll be in touch!`);
+      }
+
+      let themeButton = document.querySelector(".theme");
+      themeButton.addEventListener("click", changeTheme);
+
+      let classesButton = document.querySelector(".book-classes");
+      classesButton.addEventListener("click", bookClasses);
+    </script>
+  </body>
+</html>
